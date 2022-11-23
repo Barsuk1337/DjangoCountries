@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    {% for item in letters %}
+        <a href="{% url 'country_on_letter' item %}">{{ item }}</a>
+    {% endfor %}
+    <ol>
+        {% for item in countries %}
+            <a href="{% url 'country-info' item.country %}">
+                <li>
+                    {{ item.country }}
+                </li>
+            </a>
+        {% endfor %}
+    </ol>
+</body>
+</html>
